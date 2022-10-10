@@ -7,7 +7,9 @@ Uma aplicação console que calcula o imposto a ser pago dados as operações de
 [{"operation":"buy", "unit-cost":20.00, "quantity": 10000},
 {"operation":"sell", "unit-cost":10.00, "quantity": 5000}]
 ```
-E produz uma lista de saída, com os respectivos impostos:
+Para finalizar a inserção de operações basta apertar *enter* inserindo uma linha vazia.
+
+A saída é uma lista, com os respectivos impostos calculados:
 ```
 [{"tax":0}, {"tax":10000}]
 [{"tax":0}, {"tax":0}]
@@ -23,8 +25,9 @@ Para realizar o build do projeto basta executar o comando:
 dotnet build
 ```
 
-E em seguida, para executar o projeto:
+Então, para executar o projeto execute os seguintes comandos:
 ```
+cd .\CapitalGain\
 dotnet run
 ```
 
