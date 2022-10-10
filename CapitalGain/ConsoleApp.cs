@@ -47,10 +47,11 @@ namespace CapitalGain
         }
         private void ProcessInput(List<OperationsHistoryModel> operations)
         {
+            var command = new CalculateTaxCommand(_settings);
+
             foreach (var operation in operations)
             {
-                var result = new CalculateTaxCommand(_settings)
-                    .Execute(operation.Operations);
+                var result = command.Execute(operation.Operations);
 
                 Console.WriteLine($"{JsonConvert.SerializeObject(result)}\n");
             }
