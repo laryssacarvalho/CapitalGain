@@ -1,0 +1,38 @@
+# Ganho de Capital
+Uma aplicação console que calcula o imposto a ser pago dados as operações de compra e venda de ações. O programa recebe listas de operações como entrada, conforme demonstra o exemplo abaixo:
+
+```
+[{"operation":"buy", "unit-cost":10.00, "quantity": 10000},
+{"operation":"sell", "unit-cost":20.00, "quantity": 5000}]
+[{"operation":"buy", "unit-cost":20.00, "quantity": 10000},
+{"operation":"sell", "unit-cost":10.00, "quantity": 5000}]
+```
+E produz uma lista de saída, com os respectivos impostos:
+```
+[{"tax":0}, {"tax":10000}]
+[{"tax":0}, {"tax":0}]
+```
+
+## Dependências
+O projeto foi desenvolvido utilizando o .NET 6 sendo compátivel com Windows, macOS e Linux.
+
+## Compilar
+Para realizar o build do projeto basta executar o comando:
+
+```
+dotnet build
+```
+
+E em seguida, para executar o projeto:
+```
+dotnet run
+```
+
+## Testes
+Para executar os testes do projeto, basta executar o seguinte comando na pasta raíz:
+```
+dotnet test
+```
+
+## Configurações
+A taxa utilizada para o cálculo do imposto é por padrão 20% mas isso pode ser alterado no arquivo *appsettings.json*.
